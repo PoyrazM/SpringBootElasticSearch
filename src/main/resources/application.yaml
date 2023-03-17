@@ -1,2 +1,6 @@
+logging:
+  file:
+    name: log/springbootelasticsearch.log
+
 server:
   port: 8001
