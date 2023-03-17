@@ -1,0 +1,121 @@
+2023-03-18T01:47:54.759+03:00  INFO 40667 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Starting SpringBootElasticSearchApplication using Java 19.0.1 with PID 40667 (/Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch/build/classes/java/main started by mertcan.poyraz in /Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch)
+2023-03-18T01:47:54.761+03:00  INFO 40667 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : No active profile set, falling back to 1 default profile: "default"
+2023-03-18T01:47:54.794+03:00  INFO 40667 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-18T01:47:54.794+03:00  INFO 40667 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-18T01:47:55.857+03:00  INFO 40667 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-18T01:47:55.971+03:00  INFO 40667 --- [restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8001
+2023-03-18T01:47:55.980+03:00  INFO 40667 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Started SpringBootElasticSearchApplication in 1.515 seconds (process running for 2.071)
+2023-03-18T01:48:14.982+03:00 ERROR 40667 --- [reactor-http-nio-2] a.w.r.e.AbstractErrorWebExceptionHandler : [903db84b-1]  500 Server Error for HTTP GET "/api/car/v1/random"
+
+java.lang.NullPointerException: Cannot invoke "com.enuygun.springbootelasticsearch.service.CarService.generateCar()" because "com.enuygun.springbootelasticsearch.api.server.CarApi.carService" is null
+	at com.enuygun.springbootelasticsearch.api.server.CarApi.random(CarApi.java:23) ~[main/:na]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ HTTP GET "/api/car/v1/random" [ExceptionHandlingWebHandler]
+Original Stack Trace:
+		at com.enuygun.springbootelasticsearch.api.server.CarApi.random(CarApi.java:23) ~[main/:na]
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+		at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+		at org.springframework.web.reactive.result.method.InvocableHandlerMethod.lambda$invoke$0(InvocableHandlerMethod.java:145) ~[spring-webflux-6.0.6.jar:6.0.6]
+		at reactor.core.publisher.FluxFlatMap.trySubscribeScalarMap(FluxFlatMap.java:152) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoFlatMap.subscribeOrReturn(MonoFlatMap.java:53) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:57) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:240) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:203) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onComplete(MonoFlatMap.java:189) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.Operators.complete(Operators.java:137) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoZip.subscribe(MonoZip.java:121) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4485) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:263) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerNext(FluxConcatMapNoPrefetch.java:258) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:863) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2545) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.request(FluxMapFuseable.java:171) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2305) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:338) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoNext$NextSubscriber.request(MonoNext.java:108) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2341) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2215) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onSubscribe(MonoNext.java:70) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onSubscribe(FluxConcatMapNoPrefetch.java:164) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:52) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4485) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:263) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.core.publisher.MonoDeferContextual.subscribe(MonoDeferContextual.java:55) ~[reactor-core-3.5.3.jar:3.5.3]
+		at reactor.netty.http.server.HttpServer$HttpServerHandle.onStateChange(HttpServer.java:1006) ~[reactor-netty-http-1.1.4.jar:1.1.4]
+		at reactor.netty.ReactorNetty$CompositeConnectionObserver.onStateChange(ReactorNetty.java:710) ~[reactor-netty-core-1.1.4.jar:1.1.4]
+		at reactor.netty.transport.ServerTransport$ChildObserver.onStateChange(ServerTransport.java:477) ~[reactor-netty-core-1.1.4.jar:1.1.4]
+		at reactor.netty.http.server.HttpServerOperations.onInboundNext(HttpServerOperations.java:633) ~[reactor-netty-http-1.1.4.jar:1.1.4]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:113) ~[reactor-netty-core-1.1.4.jar:1.1.4]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at reactor.netty.http.server.HttpTrafficHandler.channelRead(HttpTrafficHandler.java:228) ~[reactor-netty-http-1.1.4.jar:1.1.4]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.89.Final.jar:4.1.89.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.89.Final.jar:4.1.89.Final]
+		at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-03-18T01:49:05.109+03:00  INFO 40764 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Starting SpringBootElasticSearchApplication using Java 19.0.1 with PID 40764 (/Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch/build/classes/java/main started by mertcan.poyraz in /Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch)
+2023-03-18T01:49:05.111+03:00  INFO 40764 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : No active profile set, falling back to 1 default profile: "default"
+2023-03-18T01:49:05.153+03:00  INFO 40764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-18T01:49:05.169+03:00  INFO 40764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-18T01:49:06.095+03:00  INFO 40764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-18T01:49:06.192+03:00  INFO 40764 --- [restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8001
+2023-03-18T01:49:06.200+03:00  INFO 40764 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Started SpringBootElasticSearchApplication in 1.432 seconds (process running for 1.952)
+2023-03-18T01:49:40.518+03:00  INFO 40819 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Starting SpringBootElasticSearchApplication using Java 19.0.1 with PID 40819 (/Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch/build/classes/java/main started by mertcan.poyraz in /Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch)
+2023-03-18T01:49:40.519+03:00  INFO 40819 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : No active profile set, falling back to 1 default profile: "default"
+2023-03-18T01:49:40.551+03:00  INFO 40819 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-18T01:49:40.551+03:00  INFO 40819 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-18T01:49:41.593+03:00  INFO 40819 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-18T01:49:41.694+03:00  INFO 40819 --- [restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8001
+2023-03-18T01:49:41.703+03:00  INFO 40819 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Started SpringBootElasticSearchApplication in 1.559 seconds (process running for 2.08)
+2023-03-18T01:50:33.889+03:00  INFO 40895 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Starting SpringBootElasticSearchApplication using Java 19.0.1 with PID 40895 (/Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch/build/classes/java/main started by mertcan.poyraz in /Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch)
+2023-03-18T01:50:33.891+03:00  INFO 40895 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : No active profile set, falling back to 1 default profile: "default"
+2023-03-18T01:50:33.924+03:00  INFO 40895 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-18T01:50:33.924+03:00  INFO 40895 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-18T01:50:34.824+03:00  INFO 40895 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-18T01:50:34.921+03:00  INFO 40895 --- [restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8001
+2023-03-18T01:50:34.929+03:00  INFO 40895 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Started SpringBootElasticSearchApplication in 1.339 seconds (process running for 1.805)
+2023-03-18T01:55:53.815+03:00  INFO 41327 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Starting SpringBootElasticSearchApplication using Java 19.0.1 with PID 41327 (/Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch/build/classes/java/main started by mertcan.poyraz in /Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch)
+2023-03-18T01:55:53.817+03:00  INFO 41327 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : No active profile set, falling back to 1 default profile: "default"
+2023-03-18T01:55:53.865+03:00  INFO 41327 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-18T01:55:53.866+03:00  INFO 41327 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-18T01:55:54.872+03:00  INFO 41327 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-18T01:55:54.964+03:00  INFO 41327 --- [restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8001
+2023-03-18T01:55:54.971+03:00  INFO 41327 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Started SpringBootElasticSearchApplication in 1.517 seconds (process running for 2.048)
+2023-03-18T01:57:04.141+03:00  INFO 41327 --- [reactor-http-nio-2] c.e.s.api.server.DefaultRestApi          : Hello this is Spring Boot REST API
