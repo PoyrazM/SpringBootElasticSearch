@@ -157,3 +157,20 @@ Original Stack Trace:
 2023-03-18T17:00:29.916+03:00  INFO 51853 --- [reactor-http-nio-2] c.e.s.api.server.CarApi                  : Car is Car(brand=Mercedes, color=Green, type=Sport, price=0, available=false, firstReleaseDate=null)
 2023-03-18T17:00:33.613+03:00  INFO 51853 --- [reactor-http-nio-2] c.e.s.api.server.CarApi                  : Car is Car(brand=Mercedes, color=Green, type=Sport, price=0, available=false, firstReleaseDate=null)
 2023-03-18T17:00:34.485+03:00  INFO 51853 --- [reactor-http-nio-2] c.e.s.api.server.CarApi                  : Car is Car(brand=Mercedes, color=Green, type=Sport, price=0, available=false, firstReleaseDate=null)
+2023-03-18T17:11:06.066+03:00  INFO 52756 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Starting SpringBootElasticSearchApplication using Java 19.0.1 with PID 52756 (/Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch/build/classes/java/main started by mertcan.poyraz in /Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch)
+2023-03-18T17:11:06.069+03:00  INFO 52756 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : No active profile set, falling back to 1 default profile: "default"
+2023-03-18T17:11:06.125+03:00  INFO 52756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-18T17:11:06.125+03:00  INFO 52756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-18T17:11:07.312+03:00  INFO 52756 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-18T17:11:07.428+03:00  INFO 52756 --- [restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8001
+2023-03-18T17:11:07.438+03:00  INFO 52756 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Started SpringBootElasticSearchApplication in 1.798 seconds (process running for 2.379)
+2023-03-18T17:11:35.571+03:00  INFO 52756 --- [reactor-http-nio-2] c.e.s.api.server.CarApi                  : Car is Car(brand=Mercedes, color=Green, type=Sport, price=0, available=false, firstReleaseDate=null)
+2023-03-18T17:11:46.407+03:00  INFO 52804 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Starting SpringBootElasticSearchApplication using Java 19.0.1 with PID 52804 (/Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch/build/classes/java/main started by mertcan.poyraz in /Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch)
+2023-03-18T17:11:46.409+03:00  INFO 52804 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : No active profile set, falling back to 1 default profile: "default"
+2023-03-18T17:11:46.450+03:00  INFO 52804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-18T17:11:46.451+03:00  INFO 52804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-18T17:11:47.469+03:00  INFO 52804 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-18T17:11:47.561+03:00  INFO 52804 --- [restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8001
+2023-03-18T17:11:47.570+03:00  INFO 52804 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Started SpringBootElasticSearchApplication in 1.548 seconds (process running for 2.098)
+2023-03-18T17:12:00.191+03:00  INFO 52804 --- [reactor-http-nio-2] c.e.s.api.server.CarApi                  : Car is Car(brand=Mercedes, color=Green, type=Sport, price=0, available=false, firstReleaseDate=null)
+2023-03-18T17:12:01.281+03:00  INFO 52804 --- [reactor-http-nio-2] c.e.s.api.server.CarApi                  : Car is Car(brand=Mercedes, color=Green, type=Sport, price=0, available=false, firstReleaseDate=null)
