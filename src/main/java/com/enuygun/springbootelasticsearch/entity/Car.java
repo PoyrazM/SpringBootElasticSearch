@@ -25,4 +25,8 @@ public class Car {
 
     private List<String> additionalFeatures;
 
+    private Engine engine;
+
+    private List<Tire> tires;
+
 }

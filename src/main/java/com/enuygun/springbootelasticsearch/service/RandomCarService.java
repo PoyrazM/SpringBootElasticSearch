@@ -1,6 +1,8 @@
 package com.enuygun.springbootelasticsearch.service;
 
 import com.enuygun.springbootelasticsearch.entity.Car;
+import com.enuygun.springbootelasticsearch.entity.Engine;
+import com.enuygun.springbootelasticsearch.entity.Tire;
 import com.enuygun.springbootelasticsearch.util.RandomDateUtil;
 import org.springframework.stereotype.Service;
 
@@ -28,11 +30,36 @@ public class RandomCarService implements CarService{
             additionalFeatures.add(ADDITIONAL_FEATURES.get(i));
         }
 
+        var fuel = FUELS.get(ThreadLocalRandom.current().nextInt(FUELS.size()));
+
+        var horsePower = ThreadLocalRandom.current().nextInt(100, 221);
+
+        var engine = new Engine();
+        engine.setFuelType(fuel);
+        engine.setHorsePower(horsePower);
+
+        var tires = new ArrayList<Tire>();
+
+        for (int i = 0; i < 3; i++) {
+            var tire = new Tire();
+            var manufacturer = TIRE_MANUFACTURES.get(ThreadLocalRandom.current().nextInt(TIRE_MANUFACTURES.size()));
+            var size = ThreadLocalRandom.current().nextInt(15, 18);
+            var tirePrice = ThreadLocalRandom.current().nextInt(200, 401);
+
+            tire.setManufacture(manufacturer);
+            tire.setPrice(tirePrice);
+            tire.setSize(size);
+
+            tires.add(tire);
+        }
+
         var result = new Car(brand, color, types);
         result.setAvailable(available);
         result.setPrice(price);
         result.setFirstReleaseDate(firstReleaseDate);
         result.setAdditionalFeatures(additionalFeatures);
+        result.setEngine(engine);
+        result.setTires(tires);
 
         return result;
     }
