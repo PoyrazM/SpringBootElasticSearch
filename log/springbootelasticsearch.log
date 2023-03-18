@@ -174,3 +174,17 @@ Original Stack Trace:
 2023-03-18T17:11:47.570+03:00  INFO 52804 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Started SpringBootElasticSearchApplication in 1.548 seconds (process running for 2.098)
 2023-03-18T17:12:00.191+03:00  INFO 52804 --- [reactor-http-nio-2] c.e.s.api.server.CarApi                  : Car is Car(brand=Mercedes, color=Green, type=Sport, price=0, available=false, firstReleaseDate=null)
 2023-03-18T17:12:01.281+03:00  INFO 52804 --- [reactor-http-nio-2] c.e.s.api.server.CarApi                  : Car is Car(brand=Mercedes, color=Green, type=Sport, price=0, available=false, firstReleaseDate=null)
+2023-03-18T17:23:04.982+03:00  INFO 53833 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Starting SpringBootElasticSearchApplication using Java 19.0.1 with PID 53833 (/Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch/build/classes/java/main started by mertcan.poyraz in /Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch)
+2023-03-18T17:23:04.984+03:00  INFO 53833 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : No active profile set, falling back to 1 default profile: "default"
+2023-03-18T17:23:05.034+03:00  INFO 53833 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-18T17:23:05.034+03:00  INFO 53833 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-18T17:23:06.176+03:00  INFO 53833 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-18T17:23:06.283+03:00  INFO 53833 --- [restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8001
+2023-03-18T17:23:06.293+03:00  INFO 53833 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Started SpringBootElasticSearchApplication in 1.73 seconds (process running for 2.323)
+2023-03-18T17:30:03.705+03:00  INFO 54387 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Starting SpringBootElasticSearchApplication using Java 19.0.1 with PID 54387 (/Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch/build/classes/java/main started by mertcan.poyraz in /Users/mertcan.poyraz/IdeaProjects/SpringBootElasticSearch)
+2023-03-18T17:30:03.707+03:00  INFO 54387 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : No active profile set, falling back to 1 default profile: "default"
+2023-03-18T17:30:03.756+03:00  INFO 54387 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-18T17:30:03.756+03:00  INFO 54387 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-18T17:30:04.902+03:00  INFO 54387 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-18T17:30:05.013+03:00  INFO 54387 --- [restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8001
+2023-03-18T17:30:05.022+03:00  INFO 54387 --- [restartedMain] c.e.s.SpringBootElasticSearchApplication : Started SpringBootElasticSearchApplication in 1.722 seconds (process running for 2.324)
