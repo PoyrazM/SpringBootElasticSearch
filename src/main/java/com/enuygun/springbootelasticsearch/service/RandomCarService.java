@@ -3,13 +3,17 @@ package com.enuygun.springbootelasticsearch.service;
 import com.enuygun.springbootelasticsearch.entity.Car;
 import com.enuygun.springbootelasticsearch.entity.Engine;
 import com.enuygun.springbootelasticsearch.entity.Tire;
+import com.enuygun.springbootelasticsearch.repository.CarElasticRepository;
 import com.enuygun.springbootelasticsearch.util.RandomDateUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Service
+@Component
 public class RandomCarService implements CarService{
 
     @Override

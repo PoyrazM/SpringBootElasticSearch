@@ -8,3 +8,15 @@ server:
 spring:
   jackson:
     property-naming-strategy: SNAKE_CASE
+  main:
+    allow-bean-definition-overriding: true
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+
+elasticsearch:
+  host: http://localhost:9200
+
+
+
